@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار بسيط</title>
+    <title>المهمة الأولى</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,6 +28,26 @@
         .options button:hover {
             background-color: #e0e0e0;
         }
+        .input-section {
+            margin-top: 20px;
+            display: none;
+        }
+        .input-section input {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .input-section button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
         .result {
             margin-top: 20px;
             font-size: 18px;
@@ -38,21 +58,42 @@
 <body>
 
     <div class="question">
-        <h2>ما هو الكوكب الأقرب إلى الشمس؟</h2>
+        <h2>من هو الشخص الذي يعتقد أنه على علاقة سرية مع ويليام هاربر؟</h2>
     </div>
     <div class="options">
-        <button onclick="checkAnswer('wrong')">الأرض</button>
-        <button onclick="checkAnswer('correct')">عطارد</button>
-        <button onclick="checkAnswer('wrong')">المريخ</button>
-        <button onclick="checkAnswer('wrong')">زحل</button>
+        <button onclick="checkAnswer('wrong')">جوناثان فول</button>
+        <button onclick="checkAnswer('wrong')">السيدة ميرندا هاربر</button>
+        <button onclick="showInput()">شخص مجهول</button>
+        <button onclick="checkAnswer('wrong')">السيد سليمان كلارك</button>
+    </div>
+    <div class="input-section" id="inputSection">
+        <p>من هو الشخص المجهول؟</p>
+        <input type="text" id="unknownName" placeholder="أدخل اسم الشخص">
+        <button onclick="checkName()">تحقق</button>
     </div>
     <div class="result" id="result"></div>
 
     <script>
         function checkAnswer(answer) {
             const resultDiv = document.getElementById('result');
-            if (answer === 'correct') {
-                resultDiv.textContent = 'إجابة صحيحة! أحسنت.';
+            const inputSection = document.getElementById('inputSection');
+            if (answer === 'wrong') {
+                resultDiv.textContent = 'إجابة خاطئة! حاول مرة أخرى.';
+                resultDiv.style.color = 'red';
+                inputSection.style.display = 'none';
+            }
+        }
+
+        function showInput() {
+            const inputSection = document.getElementById('inputSection');
+            inputSection.style.display = 'block';
+        }
+
+        function checkName() {
+            const input = document.getElementById('unknownName').value.trim();
+            const resultDiv = document.getElementById('result');
+            if (input === 'ريبيكا دايلي') {
+                resultDiv.textContent = 'إجابة صحيحة! يمكنك الآن فتح مظروف المهمة الثانية.';
                 resultDiv.style.color = 'green';
             } else {
                 resultDiv.textContent = 'إجابة خاطئة! حاول مرة أخرى.';
