@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار بسيط</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            direction: rtl;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .options button:hover {
+            background-color: #e0e0e0;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="question">
+        <h2>ما هو الكوكب الأقرب إلى الشمس؟</h2>
+    </div>
+    <div class="options">
+        <button onclick="checkAnswer('wrong')">الأرض</button>
+        <button onclick="checkAnswer('correct')">عطارد</button>
+        <button onclick="checkAnswer('wrong')">المريخ</button>
+        <button onclick="checkAnswer('wrong')">زحل</button>
+    </div>
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkAnswer(answer) {
+            const resultDiv = document.getElementById('result');
+            if (answer === 'correct') {
+                resultDiv.textContent = 'إجابة صحيحة! أحسنت.';
+                resultDiv.style.color = 'green';
+            } else {
+                resultDiv.textContent = 'إجابة خاطئة! حاول مرة أخرى.';
+                resultDiv.style.color = 'red';
+            }
+        }
+    </script>
+
+</body>
+</html>
