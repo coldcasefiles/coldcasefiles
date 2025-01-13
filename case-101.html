@@ -1,23 +1,95 @@
-<!-- بطاقة التلميحات -->
-<div style="border: 2px solid black; border-radius: 12px; padding: 20px; width: 40%; background-color: #d8d6d6; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);">
-  <h3 style="text-align: center; color: navy;">🔍 **التلميحات**</h3>
-  <p style="text-align: center; font-size: 16px;">
-    هل تحتاج إلى تلميحات لمساعدتك في فك شفرة الجريمة؟  
-    انقر على الزر أدناه لمراجعة الأدلة التي قد تقودك للحل.
-  </p>
-  <div style="text-align: center;">
-    <button style="padding: 12px 24px; background-color: darkred; color: white; border: none; border-radius: 8px; cursor: pointer;">عرض التلميحات</button>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>انتقام منتصف الليل</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      border: 5px solid darkred;
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+      width: 60%;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      color: darkred;
+    }
+    .options {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .card {
+      border: 2px solid black;
+      border-radius: 12px;
+      padding: 20px;
+      width: 40%;
+      background-color: #d8d6d6;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    .card h3 {
+      color: navy;
+    }
+    .card p {
+      font-size: 16px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 10px;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .button.hints {
+      background-color: darkred;
+    }
+    .button.answers {
+      background-color: darkblue;
+    }
+    hr {
+      margin: 30px 0;
+      border-top: 2px dashed darkred;
+    }
+    .footer {
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🕵️‍♂️ مرحباً بك أيها المحقق البارع! 🕵️‍♀️</h2>
+    <p>اختر أحد المسارين أدناه لتبدأ مغامرتك:</p>
+    <div class="options">
+      <!-- بطاقة التلميحات -->
+      <div class="card">
+        <h3>🔍 التلميحات</h3>
+        <p>هل تحتاج إلى تلميحات لمساعدتك في فك شفرة الجريمة؟ انقر على الزر أدناه للوصول إلى التلميحات.</p>
+        <a href="hints.html" class="button hints">عرض التلميحات</a>
+      </div>
+      <!-- بطاقة الأجوبة -->
+      <div class="card">
+        <h3>📝 الأجوبة</h3>
+        <p>هل توصلت إلى الحل أو تحتاج للتحقق من إجابتك؟ انقر على الزر أدناه لمعرفة الإجابات النهائية.</p>
+        <a href="answers.html" class="button answers">عرض الأجوبة</a>
+      </div>
+    </div>
+    <hr>
+    <p class="footer">*تذكر، كل تلميح أو جواب يقربك خطوة نحو الحقيقة. الجرائم لا تُحل إلا بالمثابرة والصبر!*</p>
   </div>
-</div>
-
-<!-- بطاقة الأجوبة -->
-<div style="border: 2px solid black; border-radius: 12px; padding: 20px; width: 40%; background-color: #d8d6d6; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);">
-  <h3 style="text-align: center; color: navy;">📝 **الأجوبة**</h3>
-  <p style="text-align: center; font-size: 16px;">
-    هل توصلت إلى الحل أو تحتاج للتحقق من إجابتك؟  
-    انقر على الزر أدناه لمعرفة الإجابات النهائية للألغاز.
-  </p>
-  <div style="text-align: center;">
-    <button style="padding: 12px 24px; background-color: darkblue; color: white; border: none; border-radius: 8px; cursor: pointer;">عرض الأجوبة</button>
-  </div>
-</div>
+</body>
+</html>
