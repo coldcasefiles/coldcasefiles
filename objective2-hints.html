@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تلميحات الهدف الثاني</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      border: 5px solid darkred;
+      padding: 20px;
+      background-color: #fff;
+      text-align: center;
+      width: 60%;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    h2 {
+      color: darkred;
+      margin-bottom: 20px;
+    }
+    .hint {
+      border: 2px solid black;
+      border-radius: 8px;
+      margin: 10px 0;
+      padding: 15px;
+      background-color: #d8d6d6;
+      display: none;
+      transition: all 0.3s ease-in-out;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px 0;
+      background-color: darkred;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button:hover {
+      background-color: #a80000;
+    }
+    hr {
+      margin: 30px 0;
+      border-top: 2px dashed darkred;
+    }
+    .footer {
+      font-size: 14px;
+      color: gray;
+    }
+  </style>
+  <script>
+    function showHint(hintId) {
+      document.getElementById(hintId).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>🔍 تلميحات الهدف الثاني</h2>
+    <p>اضغط على الأزرار أدناه لاكتشاف التلميحات واحدة تلو الأخرى:</p>
+    <div>
+      <button class="button" onclick="showHint('hint1')">عرض التلميح الأول</button>
+      <div id="hint1" class="hint">
+        إيصال المطعم يبدو مشبوهًا.
+      </div>
+    </div>
+    <div>
+      <button class="button" onclick="showHint('hint2')">عرض التلميح الثاني</button>
+      <div id="hint2" class="hint">
+        فاتورة الفندق تبدو أيضًا مشبوهة.
+      </div>
+    </div>
+    <div>
+      <button class="button" onclick="showHint('hint3')">عرض التلميح الثالث</button>
+      <div id="hint3" class="hint">
+        ماذا قالت "ميرندا" و"سليمان" أنهما كانا يفعلان في ليلة رأس السنة؟
+      </div>
+    </div>
+    <hr>
+    <p class="footer">*استخدم التلميحات بحكمة لتصل إلى الحقيقة!*</p>
+  </div>
+</body>
+</html>
